@@ -6,4 +6,5 @@ uvicorn
 gunicorn
 pip
 pydantic
-fastapi 
+fastapi
+sklearn
