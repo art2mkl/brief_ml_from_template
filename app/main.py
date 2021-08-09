@@ -39,9 +39,15 @@ df = sns.load_dataset('penguins')
 model = Pinguins_model(df,'species')
 model.prepare_model(RandomForestClassifier())
 
+
+
 @app.get('/')
 async def root():
     return 'api is ready'
+
+@app.get('/df')
+async def data():
+    return json.loads(df.to_json())
     
 
 @app.get('/prediction')

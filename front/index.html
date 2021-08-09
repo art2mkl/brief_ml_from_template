@@ -23,9 +23,9 @@ background-size:cover; width:100%; height:100vh;
 
         <!-- Formulaire -->
 
-        <form class='shadow p-5 rounded bg-none text-light'>
+        <form class='shadow p-5 rounded bg-transparent bg-gradient text-light mx-auto' style = "max-width: 700px;">
 
-            <div class="row p-2 d-flex justify-content-between">
+            <div class="row p-0 d-flex justify-content-between">
 
                 <h2 class="text-warning pb-3">Make a prediction !</h2>
 
@@ -41,30 +41,27 @@ background-size:cover; width:100%; height:100vh;
                             <option>Dream</option>
                         </select>
                     </div>
-
                     <div class="mb-3">
-                        <label for="bill_length_mm" class="form-label">Bill_length_mm</label>
-                        <input type="number" class="form-control" id="bill_length_mm"
+                        <label for="bill_length_mm" class="form-label">Bill_length_mm (32-60 mm)</label>
+                        <input type="range" step=0.1 min=32 max=60 class="form-range" id="bill_length_mm"
                         placeholder="mm">
                     </div>
                     <div class="mb-3">
-                        <label for="bill_depth_mm" class="form-label">bill_depth_mm</label>
-                        <input type="number" class="form-control" id="bill_depth_mm"
+                        <label for="bill_depth_mm" class="form-label">bill_depth_mm (13-22 mm)</label>
+                        <input type="range" step=0.1 min=13 max=22 class="form-range" id="bill_depth_mm"
                         placeholder="mm">
                     </div>
                 </div>
 
-
                 <div class="col-sm-6">
-
                     <div class="mb-3">
-                        <label for="flipper_length_mm" class="form-label">flipper_length_mm</label>
-                        <input type="number" class="form-control" id="bill_depth_mm"
+                        <label for="flipper_length_mm" class="form-label">flipper_length_mm (172-231 mm)</label>
+                        <input type="range" step=0.1 min=172 max=231 class="form-range" id="bill_depth_mm"
                         placeholder="mm">
                     </div>
                     <div class="mb-3">
-                        <label for="body_mass_gm" class="form-label">body_mass_g</label>
-                        <input type="number" class="form-control" id="body_mass_g"
+                        <label for="body_mass_gm" class="form-label">body_mass_g (2700-6300 g)</label>
+                        <input type="range" step=0.1 min=2700 max=6300 class="form-range" id="body_mass_g"
                         placeholder="mm">
                     </div>
                     <div class="mb-3">
@@ -78,11 +75,10 @@ background-size:cover; width:100%; height:100vh;
                 </div>
             </div>
             <div class="text-center">
-
-                <button type="submit" class="btn btn-primary w-100">Predict</button>
+                <button type="submit" class="my-3 btn btn-primary w-100">Predict</button>
             </div>
         </form>
-        <div class="alert alert-warning"></div>
+        <div class="alert alert-warning mx-auto mt-5 shadow" style = "max-width: 700px;"></div>
     </div>
 
 
