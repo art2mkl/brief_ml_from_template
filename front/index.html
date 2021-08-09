@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <!-- https://cdn.pixabay.com/photo/2019/04/11/23/21/insane-4120923_960_720.jpg -->
+
+    <title>Pinguins</title>
+</head>
+
+<body style="background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://news.microsoft.com/wp-content/uploads/prod/sites/42/2020/09/MS_Penguin-Counting-Story_1900x800-1600x674-1-960x629.jpg');
+background-size:cover; width:100%; height:100vh;
+">
+
+    <div class="container mx-auto">
+        <h1 class='text-info my-5 text-center'>PINGUINS</h1>
+
+        <!-- Formulaire -->
+
+        <form class='shadow p-5 rounded bg-none text-light'>
+
+            <div class="row p-2 d-flex justify-content-between">
+
+                <h2 class="text-warning pb-3">Make a prediction !</h2>
+
+
+                <div class="col-sm-6">
+
+                    <div class="mb-3">
+                        <label for="island" class="form-label">island</label>
+                        <select id="island" class="form-select">
+                            <option selected>Select island</option>
+                            <option>Torgersen</option>
+                            <option>Biscoe</option>
+                            <option>Dream</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="bill_length_mm" class="form-label">Bill_length_mm</label>
+                        <input type="number" class="form-control" id="bill_length_mm"
+                        placeholder="mm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="bill_depth_mm" class="form-label">bill_depth_mm</label>
+                        <input type="number" class="form-control" id="bill_depth_mm"
+                        placeholder="mm">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+
+                    <div class="mb-3">
+                        <label for="flipper_length_mm" class="form-label">flipper_length_mm</label>
+                        <input type="number" class="form-control" id="bill_depth_mm"
+                        placeholder="mm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="body_mass_gm" class="form-label">body_mass_g</label>
+                        <input type="number" class="form-control" id="body_mass_g"
+                        placeholder="mm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sex" class="form-label">Sex</label>
+                        <select id="sex" class="form-select">
+                            <option selected>Select sex</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+
+                <button type="submit" class="btn btn-primary w-100">Predict</button>
+            </div>
+        </form>
+        <div class="alert alert-warning"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
