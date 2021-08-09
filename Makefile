@@ -8,3 +8,6 @@ install_requirements:
 
 maj_requirements:
 	@pip freeze > app/requirements.txt
+	
+	
+	
