@@ -10,6 +10,9 @@ from IPython.core.display import display
 
 #System
 import sys
+import os
+import joblib
+from joblib import dump, load
 
 #Sklearn
 from sklearn.ensemble import RandomForestClassifier
@@ -177,4 +180,27 @@ class Pinguins_model(Pinguins_ml):
         model = self.create_model_pipe(self.preprocess, send_model)
 
         #training model
-        self.model = self.train_model(model, self.X, self.y)   
+        self.model = self.train_model(model, self.X, self.y)
+
+    def save_model(self, fit_model, name):
+        #---------------------------------------------------------
+        """ • Save model fitted
+            • Return None"""
+        #---------------------------------------------------------
+        path = os.path.dirname(os.path.realpath(__file__))
+        dump(fit_model, f'{path}/{name}')
+
+    def load_model(self, name):
+        #---------------------------------------------------------
+        """ • Load model fitted
+            • Return Model"""
+        #---------------------------------------------------------
+        path = os.path.dirname(os.path.realpath(__file__))
+
+        model = load(f'{path}/{name}')
+        return model
+
+
+    
+
+

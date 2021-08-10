@@ -68,6 +68,31 @@ async def prediction(island, bill_length_mm, bill_depth_mm, flipper_length_mm, b
     pred = model.predict_model(model.model, model.X)[0]
     return [pred]
 
+@app.get('/save')
+
+async def save():
+    model.save_model(model.model, 'pinguins.joblib')
+    return None
+
+@app.get('/predict_after_load')
+
+async def predict_after_load(island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex):
+    model.model = model.load_model('pinguins.joblib')
+    
+    quest = pd.DataFrame({
+        'species': "query",
+        'island': [str(island)],
+        'bill_length_mm': [float(bill_length_mm)],
+        'bill_depth_mm': [float(bill_depth_mm)],
+        'flipper_length_mm': [float(flipper_length_mm)],
+        'body_mass_g': [float(body_mass_g)],
+        'sex': [str(sex)]                         
+    })
+
+    model.transform_null(quest)
+    pred = model.predict_model(model.model, model.X)[0]
+    return [pred]
+
 
 
 
