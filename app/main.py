@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import json
 
+#for Cors policy
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -24,6 +25,7 @@ from ml_pinguins_pkg.pinguins_model import Pinguins_model
 
 app = FastAPI()
 
+#for Cors policy, allows connect navigator with app
 origins = ["*"]
 
 app.add_middleware(
