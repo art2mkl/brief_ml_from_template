@@ -5,7 +5,7 @@ setuptools
 uvicorn
 gunicorn
 pip
-pydantic
 fastapi
 sklearn
 joblib
+ipython
