@@ -43,6 +43,7 @@ $('form').on('submit', e => {
                 $('.alert').text(text)
                 $('.alert').fadeIn()
             })
+        
 
 
            
