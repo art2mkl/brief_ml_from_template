@@ -2,6 +2,7 @@
 $('.alert').hide()
 
 
+
 //Actions sur le formulaire lors de la validation
 
 $('form').on('submit', e => {
@@ -29,7 +30,7 @@ $('form').on('submit', e => {
         body_mass_g = $('input').eq(3).val()
         sex = $('select').eq(1).val()
 
-        url = `http://127.0.0.1:8000/prediction?island=${island}&bill_length_mm=${bill_length_mm}&bill_depth_mm=${bill_depth_mm}&flipper_length_mm=${flipper_length_mm}&body_mass_g=${body_mass_g}&sex=${sex} `
+        url = `https://darkpinguins.azurewebsites.net/prediction?island=${island}&bill_length_mm=${bill_length_mm}&bill_depth_mm=${bill_depth_mm}&flipper_length_mm=${flipper_length_mm}&body_mass_g=${body_mass_g}&sex=${sex} `
 
         $.ajax({
             url: url,

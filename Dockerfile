@@ -18,3 +18,4 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 
 # à lancer dans le shell
 # docker build -t nom_image .
+# docker run -p 8000:80 nom_image
