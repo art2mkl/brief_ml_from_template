@@ -4,8 +4,8 @@
 API "PINGUINS" predict pinguins species with https request
 
 ## Equipe
-https://github.com/clement-camara
-https://github.com/art2mkl
+* https://github.com/clement-camara
+* https://github.com/art2mkl
 
 ## Introduction
 L’API PINGUINS fournit une API de services Web pratique, puissante et rapide afin de réaliser des prédictions de classifications d'espèces de pinguins à l'aide d'un modèle de Machine Learning complexe.
@@ -68,15 +68,15 @@ Ces paramètres doivent respecter les contraintes suivantes :
     * *Torgersen*
     * *Biscoe*
     * *Dream*
-<br>
+
 * **< bill_length >** représente la longueur du bec, ses valeurs varient de 32 à 60 mm
-<br>
+
 * **< bill_depth_mm >** représente la profondeur du bec, ses valeurs varient de 13 à 22 mm
-<br>
+
 * **< flipper_length_mm >** représente la longueur de la nageoire, ses valeurs varient de 172 à 231 mm
-<br>
+
 * **< body_mass_gm >** représente le poids de l'individu, ses valeurs varient de 2700 à 6300 g
-<br>
+
 
 * **< sex >** représente le sexe de l'individu, il peut présenter les valeurs suivantes : 
     * *Male*
