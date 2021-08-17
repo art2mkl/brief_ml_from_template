@@ -1,10 +1,7 @@
 //Masquer la validation
 $('.alert').hide()
 
-
-
 //Actions sur le formulaire lors de la validation
-
 $('form').on('submit', e => {
 
     //Annuler le rafraichissement automatique de la page
