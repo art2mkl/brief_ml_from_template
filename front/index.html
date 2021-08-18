@@ -8,29 +8,28 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
 
     <title>Pinguins</title>
 </head>
 
-<body style="background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://news.microsoft.com/wp-content/uploads/prod/sites/42/2020/09/MS_Penguin-Counting-Story_1900x800-1600x674-1-960x629.jpg');
-background-size:cover; width:100%; height:100vh;
-">
+<body class='main_bg'>
 
-    <div class="container mx-auto">
-        <h1 class='text-info my-5 text-center'>PINGUINS</h1>
+    <div class=" container d-flex flex-column justify-content-center align-items-center">
+        <h1 class='text-info text-center my-4'>PINGUINS</h1>
 
         <!-- Formulaire -->
 
-        <form class='shadow p-5 rounded bg-transparent bg-gradient text-light mx-auto' style = "max-width: 700px;">
+        <form class='relative shadow p-3 rounded bg-transparent bg-gradient text-light' style="max-width: 700px;">
 
-            <div class="row p-0 d-flex justify-content-between">
+            <div class="row d-flex justify-content-between">
 
                 <h2 class="text-warning pb-3">Make a prediction !</h2>
 
 
                 <div class="col-sm-6">
 
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="island" class="form-label">island</label>
                         <select id="island" class="form-select">
                             <option selected>Select island</option>
@@ -39,30 +38,30 @@ background-size:cover; width:100%; height:100vh;
                             <option>Dream</option>
                         </select>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="bill_length_mm" class="form-label">Bill_length_mm (32-60 mm)</label>
                         <input type="range" step=0.1 min=32 max=60 class="form-range" id="bill_length_mm"
-                        placeholder="mm">
+                            placeholder="mm">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="bill_depth_mm" class="form-label">bill_depth_mm (13-22 mm)</label>
                         <input type="range" step=0.1 min=13 max=22 class="form-range" id="bill_depth_mm"
-                        placeholder="mm">
+                            placeholder="mm">
                     </div>
                 </div>
 
                 <div class="col-sm-6">
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="flipper_length_mm" class="form-label">flipper_length_mm (172-231 mm)</label>
                         <input type="range" step=0.1 min=172 max=231 class="form-range" id="bill_depth_mm"
-                        placeholder="mm">
+                            placeholder="mm">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="body_mass_gm" class="form-label">body_mass_g (2700-6300 g)</label>
                         <input type="range" step=0.1 min=2700 max=6300 class="form-range" id="body_mass_g"
-                        placeholder="mm">
+                            placeholder="mm">
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2">
                         <label for="sex" class="form-label">Sex</label>
                         <select id="sex" class="form-select">
                             <option selected>Select sex</option>
@@ -75,9 +74,17 @@ background-size:cover; width:100%; height:100vh;
             <div class="text-center">
                 <button type="submit" class="my-3 btn btn-primary w-100">Predict</button>
             </div>
+            <div class="alert absolute">
+                <div class="cross">X</div>
+                <div class="diag"></div>
+            </div>
+
+
+            
         </form>
-        <div class="alert alert-warning mx-auto mt-5 shadow" style = "max-width: 700px;"></div>
+
     </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

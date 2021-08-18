@@ -120,7 +120,8 @@ model.prepare_model(RandomForestClassifier())
 La prédiction est réalisée à l'aide de la méthode predict_model
 
 Cette dernière reçoit les paramètres de prédictions via une requête GET et l'associe au modèle prédemment instancié pour retourner la prédiction d'espèce sous forme de tableau:
-```python
+
+````python
 @app.get('/prediction')
 
 async def prediction(island, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex):
@@ -138,4 +139,14 @@ async def prediction(island, bill_length_mm, bill_depth_mm, flipper_length_mm, b
     model.transform_null(quest)
     pred = model.predict_model(model.model, model.X)[0]
     return [pred]
-    ```
+   
+````
+
+## Focus déploiement
+### AZURE
+https://github.com/art2mkl/brief_ml_from_template/blob/master/Connexion_azure.md
+
+### AWS
+https://github.com/clement-camara/AWS
+
+

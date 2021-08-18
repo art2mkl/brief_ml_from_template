@@ -11,13 +11,13 @@ $('form').on('submit', e => {
     $('.alert').hide()
 
     if ($('select').eq(0).val() == "Select island"
-    || $('input').eq(0).val() == ""
-    || $('input').eq(1).val() == ""
-    || $('input').eq(2).val() == ""
-    || $('input').eq(3).val() == ""
-    || $('select').eq(1).val() == "Select sex") {
+        || $('input').eq(0).val() == ""
+        || $('input').eq(1).val() == ""
+        || $('input').eq(2).val() == ""
+        || $('input').eq(3).val() == ""
+        || $('select').eq(1).val() == "Select sex") {
         console.log('c est vide')
-        $('.alert').text("Veuillez remplir tous les champs")
+        $('.diag').text("Veuillez remplir tous les champs")
         $('.alert').fadeIn()
     } else {
         island = $('select').eq(0).val()
@@ -38,23 +38,22 @@ $('form').on('submit', e => {
             .done(function (json) {
                 text = json[0]
                 console.log(text)
-                $('.alert').text(text)
+                $('.diag').text(text)
                 $('.alert').fadeIn()
             })
-        
 
 
-           
+
+
         // fetch(url).then((Response) => {
         //     return Response.json()
         // }).then((data) => {
         //     console.log(data);
         // })
-    
-                
-            
-
 
     }
+})
 
+$('.alert').on('click', () => {
+    $('.alert').fadeOut()
 })
