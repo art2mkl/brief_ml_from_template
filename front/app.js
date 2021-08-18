@@ -11,10 +11,6 @@ $('form').on('submit', e => {
     $('.alert').hide()
 
     if ($('select').eq(0).val() == "Select island"
-        || $('input').eq(0).val() == ""
-        || $('input').eq(1).val() == ""
-        || $('input').eq(2).val() == ""
-        || $('input').eq(3).val() == ""
         || $('select').eq(1).val() == "Select sex") {
         console.log('c est vide')
         $('.diag').text("Veuillez remplir tous les champs")
@@ -41,8 +37,6 @@ $('form').on('submit', e => {
                 $('.diag').text(text)
                 $('.alert').fadeIn()
             })
-
-
 
 
         // fetch(url).then((Response) => {
