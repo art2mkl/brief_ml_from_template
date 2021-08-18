@@ -1,0 +1,39 @@
+.main_bg {
+background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://news.microsoft.com/wp-content/uploads/prod/sites/42/2020/09/MS_Penguin-Counting-Story_1900x800-1600x674-1-960x629.jpg');
+background-size:cover; 
+height:100vh;
+}
+.relative {
+    position:relative;
+}
+.absolute {
+    color:#111;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    opacity: 90%;
+    background: url('http://pngimg.com/uploads/penguin/pinguin_PNG7.png')no-repeat center center;
+}
+.cross {
+    font-weight:bold;
+    background: brown;
+    border-radius:50%;
+    width:2rem;
+    height:2rem;
+    display:flex;
+    justify-content: center;
+    border: 4px solid whitesmoke;
+    position:absolute;
+    right:-0.5rem;
+    top:-0.5rem;
+    color:whitesmoke;
+}
+.diag {
+    position:absolute;
+    top: 50%;
+    left:50%; 
+    transform: translate(-50%, -50%);
